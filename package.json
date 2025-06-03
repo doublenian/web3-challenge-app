@@ -2,6 +2,7 @@
   "name": "expo-app",
   "version": "1.0.0",
   "main": "index.ts",
+  "homepage": "https://doublenian.github.io/web3-challenge-app",
   "scripts": {
     "start": "expo start",
     "android": "DARK_MODE=media expo start --android",
@@ -19,7 +20,10 @@
     "web:build": "expo export --platform web",
     "web:serve": "npx serve dist",
     "web:clean": "rm -rf dist",
-    "deploy:web": "npm run web:clean && npm run web:build"
+    "deploy:web": "npm run web:clean && npm run web:build",
+    "deploy:github": "npm run web:build && npx gh-pages -d dist",
+    "predeploy": "npm run web:build",
+    "deploy": "npx gh-pages -d dist"
   },
   "dependencies": {
     "@expo/html-elements": "^0.4.2",
@@ -85,6 +89,7 @@
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
     "eas-cli": "^16.7.1",
+    "gh-pages": "^6.1.1",
     "jscodeshift": "^0.15.2",
     "serve": "^14.2.4",
     "typescript": "~5.8.3"

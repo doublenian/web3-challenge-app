@@ -3,8 +3,8 @@ const createExpoWebpackConfigAsync = require('@expo/webpack-config');
 module.exports = async function (env, argv) {
   const config = await createExpoWebpackConfigAsync(env, argv);
   
-  // 设置publicPath为相对路径以支持GitHub Pages
-  config.output.publicPath = './';
+  // 设置publicPath为GitHub Pages子路径
+  config.output.publicPath = '/web3-challenge-app/';
   
   return config;
 }; 

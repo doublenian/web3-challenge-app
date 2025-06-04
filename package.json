@@ -20,10 +20,11 @@
     "web:build": "expo export --platform web",
     "web:serve": "npx serve dist",
     "web:clean": "rm -rf dist",
-    "deploy:web": "npm run web:clean && npm run web:build",
+    "deploy:web": "npm run web:clean && npm run web:build && npm run fix-paths",
     "fix-paths": "node fix-paths.js",
-    "deploy:github": "npm run web:build && npm run fix-paths && npx gh-pages -d dist",
-    "predeploy": "npm run web:build && npm run fix-paths",
+    "flatten-assets": "node flatten-assets.js",
+    "deploy:github": "npm run deploy:web && npm run flatten-assets && npx gh-pages -d dist",
+    "predeploy": "npm run deploy:web && npm run flatten-assets",
     "deploy": "npx gh-pages -d dist"
   },
   "dependencies": {

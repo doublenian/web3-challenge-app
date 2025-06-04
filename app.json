@@ -29,7 +29,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "bundler": "metro"
+      "bundler": "metro",
+      "build": {
+        "basePath": "/web3-challenge-app/"
+      }
     },
     "plugins": [
       "expo-font"

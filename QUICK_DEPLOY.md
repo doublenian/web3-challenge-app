@@ -16,24 +16,7 @@ npm run deploy:github
 
 **访问地址:** https://doublenian.github.io/web3-challenge-app
 
-## EAS构建
-
-```bash
-# 生产版本
-npm run build:production
-
-# 开发版本  
-npm run build:development
-
-# 预览版本
-npm run build:preview
+## EAS构建 自动化pipeline构建android
 ```
-
-## 本地预览
-
-```bash
-# 构建并预览
-npm run web:build
-npm run web:serve
-# 访问 http://localhost:3000
+npm run build:android
 ```

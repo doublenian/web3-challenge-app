@@ -37,19 +37,3 @@ npm run web:build
 npm run web:serve
 # 访问 http://localhost:3000
 ```
-
-## 其他有用命令
-
-```bash
-# 仅构建
-npm run deploy:web
-
-# 清理构建文件
-npm run web:clean
-
-# 修复路径
-npm run fix-paths
-
-# 扁平化资源
-npm run flatten-assets
-```
